@@ -1,0 +1,199 @@
+html, body{
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+}
+#top{
+    height: 50%;
+    background-color: #999;
+}
+#box{
+    width: 500px;
+    height: 75%;
+    border: 2px black solid;
+    margin: 0 auto;
+    background-color: white;
+    white-space: pre-line;
+    overflow: auto;
+
+}
+#keyboard{
+    width: 100%;
+    height: 50%;
+    margin: 0 auto;
+    background-color: #222;
+    padding-top: 30px;
+}
+#capLight{
+    width: 4px;
+    height: 4px;
+    background-color: black;
+    position: relative;
+    left: 20px;
+    bottom: 20px;
+    display: inline-block;
+    border-radius: 50%;
+}
+button{
+    height: 55px;
+    width: 55px;
+    background-color: #222;
+    color: #cc0000;
+    border: #cc0000 1px solid;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 800;
+    font-size: 18px;
+}
+button:active{
+    background-color: #cc0000;
+    color: #222;
+}
+.button-md{
+    width: 85px;
+}
+.button-lg{
+    width: 115px;
+}
+#space{
+    width: 700px;
+}
+#row-1, #row-2, #row-3, #row-4, #row-s{
+    width: 100%;
+    margin: 5px auto;
+    text-align: center;
+}
+@media (min-width: 580px) and (max-width: 741px){
+    button{
+        height: 40px;
+        width: 40px;
+        font-size: 14px;
+    }
+    .button-md{
+        width: 70px;
+    }
+    .button-lg{
+        width: 100px;
+    }
+    #space{
+        width: 500px;
+    }
+    #capLight{
+        left: 15px;
+        bottom: 12px;
+    }
+}
+@media (min-width: 300px) and (max-width: 580px){
+    button{
+        height: 30px;
+        width: 30px;
+        font-size: 10px;
+    }
+    .button-md{
+        width: 40px;
+    }
+    .button-lg{
+        width: 60px;
+    }
+    #space{
+        width: 250px;
+    }
+    #box{
+        width: 250px;
+    }
+    #capLight{
+        left: 2px;
+        bottom: 10px;
+        
+    }
+}
+
+
+/* vertical phone */
+@media screen and (min-width: 200px) and (max-width: 415px) and
+    (min-height: 600px) and (max-height: 917px){
+    #box{
+        width: 330px;
+        margin: 10px auto;
+    }
+    button{
+        height: 40px;
+        width: 25px;
+    }
+    .button-md{
+        width: 25px;
+    }
+    .button-lg{
+        width: 25px;
+    }
+    #cap{
+        font-size: 9px;
+    }
+    #space{
+        width: 300px;
+    }
+    #capLight{ 
+        left: 2px;
+        bottom: 10px;
+    }
+    
+}
+/* horizontal phone */
+@media screen and (min-width: 665px) and (max-width: 917px) and
+    (min-height: 360px) and (max-height: 415px){
+        #box{
+            width: 850px;
+            margin: 10px auto;
+        }
+        button{
+            height: 50px;
+            width: 40px;
+            font-size: 12px;
+        }
+        .button-md{
+            width: 40px;
+        }
+        .button-lg{
+            width: 80px;
+        }
+        #space{
+            width: 600px;
+        }
+        #capLight{
+            left: 2px;
+            bottom: 10px;
+        }
+}
+
+/* vertical tablet */
+@media  screen and (min-width: 779px) and (max-width: 821px) and
+    (min-height: 1080px) and (max-height: 1290px){
+        #space{
+            width: 700px;
+        }
+        #capLight{
+            left: 2px;
+            bottom: 10px;
+        }
+    
+}
+/* horizontal tablet */
+@media  screen and (min-width: 1079px) and (max-width: 1291px) and
+    (min-height: 800px) and (max-height: 820px){
+        #space{
+            width: 600px;
+        }
+        #capLight{
+            width: 4px;
+            height: 4px;
+            background-color: black;
+            position: relative;
+            left: 2px;
+            bottom: 10px;
+            display: inline-block;
+            border-radius: 50%;
+        }
+        
+}
