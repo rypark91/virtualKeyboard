@@ -6,12 +6,13 @@ var backButton = document.querySelector("#back");
 var shiftButton = document.querySelector("#shift");
 var spaceButton = document.querySelector("#space");
 var enterButton = document.querySelector("#enter");
+var letterShiftSwitch = false;
 var letterCapSwitch = false;
 
 for(var i = 0; i < buttonList.length; i++){
     buttonList[i].addEventListener("click", function(e){
         textBox.textContent += this.textContent;
-        if(letterCapSwitch){
+        if(letterShiftSwitch){
             toLowerKeys();
         }
     });
@@ -30,19 +31,26 @@ capButton.addEventListener("click", function(){
         toLowerKeys();
     }
     else{
-        toUpperKeys();
+        toUpperCapKeys();
     }
 });
 enterButton.addEventListener("click", function(){
     textBox.textContent += `\n`;
 });
-shiftButton.addEventListener("click", toUpperKeys);
+shiftButton.addEventListener("click", toUpperShiftKeys);
 
-function toUpperKeys(){
+function toUpperCapKeys(){
     for(var i = 0; i < buttonList.length; i++){
         buttonList[i].textContent = buttonList[i].textContent.toUpperCase();
     }
     letterCapSwitch = true;
+    capLight.style.backgroundColor = "#1cfc03";
+}
+function toUpperShiftKeys(){
+    for(var i = 0; i < buttonList.length; i++){
+        buttonList[i].textContent = buttonList[i].textContent.toUpperCase();
+    }
+    letterShiftSwitch = true;
     capLight.style.backgroundColor = "#1cfc03";
 }
 function toLowerKeys(){
@@ -50,5 +58,6 @@ function toLowerKeys(){
         buttonList[i].textContent = buttonList[i].textContent.toLowerCase();
     }
     letterCapSwitch = false;
+    letterShiftSwitch = false;
     capLight.style.backgroundColor = "black";
 }
